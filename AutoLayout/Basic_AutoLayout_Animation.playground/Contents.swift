@@ -4,33 +4,34 @@ import UIKit
 import PlaygroundSupport
 
 class MyViewController : UIViewController {
+    private let animationDuration = 1.0
     
-    private let topLeftView: UIView = {
-        let temp = UIView()
+    private let topLeftButton: UIButton = {
+        let temp = UIButton()
         temp.backgroundColor = .red
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
     }()
-    private let topRightView: UIView = {
-        let temp = UIView()
+    private let topRightButton: UIButton = {
+        let temp = UIButton()
         temp.backgroundColor = .blue
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
     }()
-    private let bottomLeftView: UIView = {
-        let temp = UIView()
+    private let bottomLeftButton: UIButton = {
+        let temp = UIButton()
         temp.backgroundColor = .green
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
     }()
-    private let bottomRightView: UIView = {
-        let temp = UIView()
+    private let bottomRightButton: UIButton = {
+        let temp = UIButton()
         temp.backgroundColor = .yellow
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
     }()
-    private let centerView: UIView = {
-        let temp = UIView()
+    private let centerButton: UIButton = {
+        let temp = UIButton()
         temp.backgroundColor = .orange
         temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
@@ -46,48 +47,67 @@ class MyViewController : UIViewController {
         super.viewDidLoad()
         
         self.addViews()
+        self.addSelectors()
         self.setupConstraints()
     }
     
     func addViews() {
-        self.view.addSubview(self.topLeftView)
-        self.view.addSubview(self.topRightView)
-        self.view.addSubview(self.bottomLeftView)
-        self.view.addSubview(self.bottomRightView)
-        self.view.addSubview(self.centerView)
+        self.view.addSubview(self.topLeftButton)
+        self.view.addSubview(self.topRightButton)
+        self.view.addSubview(self.bottomLeftButton)
+        self.view.addSubview(self.bottomRightButton)
+        self.view.addSubview(self.centerButton)
+    }
+    
+    func addSelectors() {
+        self.topLeftButton.addTarget(self, action: #selector(squarePressed), for: UIControl.Event.touchUpInside)
+        self.topRightButton.addTarget(self, action: #selector(squarePressed), for: UIControl.Event.touchUpInside)
+        self.bottomLeftButton.addTarget(self, action: #selector(squarePressed), for: UIControl.Event.touchUpInside)
+        self.bottomRightButton.addTarget(self, action: #selector(squarePressed), for: UIControl.Event.touchUpInside)
+        self.centerButton.addTarget(self, action: #selector(squarePressed), for: UIControl.Event.touchUpInside)
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            self.topLeftView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
-            self.topLeftView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            self.topLeftView.widthAnchor.constraint(equalToConstant: 80),
-            self.topLeftView.heightAnchor.constraint(equalToConstant: 80),
+            self.topLeftButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+            self.topLeftButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            self.topLeftButton.widthAnchor.constraint(equalToConstant: 80),
+            self.topLeftButton.heightAnchor.constraint(equalToConstant: 80),
         ])
         NSLayoutConstraint.activate([
-            self.topRightView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
-            self.topRightView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            self.topRightView.widthAnchor.constraint(equalToConstant: 80),
-            self.topRightView.heightAnchor.constraint(equalToConstant: 80),
+            self.topRightButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+            self.topRightButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            self.topRightButton.widthAnchor.constraint(equalToConstant: 80),
+            self.topRightButton.heightAnchor.constraint(equalToConstant: 80),
         ])
         NSLayoutConstraint.activate([
-            self.bottomLeftView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
-            self.bottomLeftView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            self.bottomLeftView.widthAnchor.constraint(equalToConstant: 80),
-            self.bottomLeftView.heightAnchor.constraint(equalToConstant: 80),
+            self.bottomLeftButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+            self.bottomLeftButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            self.bottomLeftButton.widthAnchor.constraint(equalToConstant: 80),
+            self.bottomLeftButton.heightAnchor.constraint(equalToConstant: 80),
         ])
         NSLayoutConstraint.activate([
-            self.bottomRightView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
-            self.bottomRightView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            self.bottomRightView.widthAnchor.constraint(equalToConstant: 80),
-            self.bottomRightView.heightAnchor.constraint(equalToConstant: 80),
+            self.bottomRightButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+            self.bottomRightButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            self.bottomRightButton.widthAnchor.constraint(equalToConstant: 80),
+            self.bottomRightButton.heightAnchor.constraint(equalToConstant: 80),
         ])
         NSLayoutConstraint.activate([
-            self.centerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            self.centerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            self.centerView.widthAnchor.constraint(equalToConstant: 80),
-            self.centerView.heightAnchor.constraint(equalToConstant: 80),
+            self.centerButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            self.centerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            self.centerButton.widthAnchor.constraint(equalToConstant: 80),
+            self.centerButton.heightAnchor.constraint(equalToConstant: 80),
         ])
+    }
+    
+    @objc private func squarePressed(sender: UIButton!) {
+        UIView.animate(withDuration: self.animationDuration, animations: {
+            sender.transform = CGAffineTransform(rotationAngle: -0.999 * .pi)
+        }) { (_) in
+            UIView.animate(withDuration: self.animationDuration) {
+                sender.transform = CGAffineTransform.identity
+            }
+        }
     }
 }
 
