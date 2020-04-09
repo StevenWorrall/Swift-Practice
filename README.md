@@ -1,7 +1,7 @@
 # Swift-Practice
-A bunch of playgrounds where I practice Swift functionality.
+This is a Git repository that I use to store some playgrounds where I practice Swift functionality.
 
+##AutoLayout Practice
+
+[Basic AutoLayout Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/Basic_AutoLayout.playground)
 <a href="url"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/Basic_AutoLayout.png" align="center" height=25% width=25% ></a>
-<!-- ![alt text][logo]
-
-[logo]: https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/Basic_AutoLayout.png "Logo Title Text 2" -->
