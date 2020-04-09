@@ -5,13 +5,24 @@ This is a Git repository that I use to store some playgrounds where I practice S
 
 [Basic AutoLayout Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/Basic_AutoLayout.playground)
 
+<a href="url"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/Basic_AutoLayout.png" align="center" height=25% width=25% ></a>
+
 ```swift
-	NSLayoutConstraint.activate([
-        self.topLeftView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
-        self.topLeftView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-        self.topLeftView.widthAnchor.constraint(equalToConstant: 80),
-        self.topLeftView.heightAnchor.constraint(equalToConstant: 80),
-    ])
+private let topLeftView: UIView = {
+    let temp = UIView()
+    temp.backgroundColor = .red
+    temp.translatesAutoresizingMaskIntoConstraints = false
+    return temp
+}()
+
+self.view.addSubview(self.topLeftView)
+
+NSLayoutConstraint.activate([
+    self.topLeftView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+    self.topLeftView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+    self.topLeftView.widthAnchor.constraint(equalToConstant: 80),
+    self.topLeftView.heightAnchor.constraint(equalToConstant: 80),
+])
 ```
 
-<a href="url"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/Basic_AutoLayout.png" align="center" height=25% width=25% ></a>
+
