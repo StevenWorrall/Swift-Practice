@@ -3,7 +3,7 @@ This is a Git repository that I use to store some playgrounds where I practice S
 
 ## AutoLayout Practice
 
-#### [Basic AutoLayout Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/Basic_AutoLayout.playground)
+### [Basic AutoLayout Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/Basic_AutoLayout.playground)
 
 <a href="url"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/Basic_AutoLayout.png" align="center" height=25% width=25% ></a>
 
@@ -26,10 +26,9 @@ NSLayoutConstraint.activate([
 ```
 
 
-#### [Basic AutoLayout with Animation Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/Basic_AutoLayout_Animation.playground)
+### [Basic AutoLayout with Animation Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/Basic_AutoLayout_Animation.playground)
 
 <a href="url"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/Basic_AutoLayout_Animation.gif" align="center" height=25% width=25% ></a>
-
 ```swift
 self.topLeftButton.addTarget(self, action: #selector(squarePressed), for: UIControl.Event.touchUpInside)
 
