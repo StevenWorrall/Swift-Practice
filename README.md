@@ -25,7 +25,6 @@ NSLayoutConstraint.activate([
 ])
 ```
 
-
 ### [Basic AutoLayout with Animation Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/Basic_AutoLayout_Animation.playground)
 
 <a href="url"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/Basic_AutoLayout_Animation.gif" align="center" height=25% width=25% ></a>
@@ -41,3 +40,39 @@ UIView.animate(withDuration: self.animationDuration, animations: {
 }
 ```
 
+### [AutoLayout Remake with Animation Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/AutoLayout_Remake_Animation.playground)
+
+<a href="url"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/AutoLayout_Remake_Animation.gif" align="center" height=25% width=25% ></a>
+```swift
+private var squareOriginConstraints: [NSLayoutConstraint] = []
+
+func removeAllSquareConstraints() {
+    NSLayoutConstraint.deactivate(
+        self.squareOriginConstraints
+    )
+}
+    
+func addAllSquareConstraints() {
+    NSLayoutConstraint.activate(
+        self.squareOriginConstraints
+    )
+}
+    
+@objc private func resetPressed(_ sender: UIButton!) {
+    self.removeAllSquareConstraints()
+        
+    UIView.animate(withDuration: self.animationDuration) {
+        self.addAllSquareConstraints()
+        self.view.layoutIfNeeded()
+    }
+}
+    
+@objc func handlePan(_ gestureRecognizer: UIPanGestureRecognizer) {
+    if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
+            
+        let translation = gestureRecognizer.translation(in: self.view)
+        gestureRecognizer.view!.center = CGPoint(x: gestureRecognizer.view!.center.x + translation.x, y: gestureRecognizer.view!.center.y + translation.y)
+        gestureRecognizer.setTranslation(CGPoint.zero, in: self.view)
+    }
+}
+```
