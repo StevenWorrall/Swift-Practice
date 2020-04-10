@@ -139,7 +139,13 @@ class MyViewController : UIViewController {
     @objc func handlePan(_ gestureRecognizer: UIPanGestureRecognizer) {
         if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
             let translation = gestureRecognizer.translation(in: self.view)
-            gestureRecognizer.view!.center = CGPoint(x: gestureRecognizer.view!.center.x + translation.x, y: gestureRecognizer.view!.center.y + translation.y)
+            let xTranslation = gestureRecognizer.view!.center.x + translation.x
+            let yTranslation = gestureRecognizer.view!.center.y + translation.y
+            
+            guard let viewToTranslate = gestureRecognizer.view else {
+                return
+            }
+            viewToTranslate.center = CGPoint(x: xTranslation, y: yTranslation)
             gestureRecognizer.setTranslation(CGPoint.zero, in: self.view)
         }
     }
