@@ -1,8 +1,8 @@
-# AutoLayout Practice
+# Auto Layout Practice
 
-### [Basic AutoLayout Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/Basic_AutoLayout.playground)
+### [Basic Auto Layout Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/Auto_Layout/Basic_Auto_Layout.playground)
 
-<a href="url"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/Basic_AutoLayout.png" align="center" height=25% width=25% ></a>
+<a href="url"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/Basic_Auto_Layout.png" align="center" height=25% width=25% ></a>
 
 ```swift
 private let topLeftView: UIView = {
@@ -22,9 +22,9 @@ NSLayoutConstraint.activate([
 ])
 ```
 
-### [Basic AutoLayout with Animation Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/Basic_AutoLayout_Animation.playground)
+### [Basic Auto Layout with Animation Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/Auto_Layout/Basic_Auto_Layout_Animation.playground)
 
-<a href="url"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/Basic_AutoLayout_Animation.gif" align="center" height=25% width=25% ></a>
+<a href="url"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/Basic_Auto_Layout_Animation.gif" align="center" height=25% width=25% ></a>
 ```swift
 self.topLeftButton.addTarget(self, action: #selector(squarePressed), for: UIControl.Event.touchUpInside)
 
@@ -37,9 +37,9 @@ UIView.animate(withDuration: self.animationDuration, animations: {
 }
 ```
 
-### [AutoLayout Remake with Animation Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/AutoLayout_Remake_Animation.playground)
+### [Auto Layout Remake with Animation Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/Auto_Layout/Auto_Layout_Remake_Animation.playground)
 
-<a href="url"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/AutoLayout_Remake_Animation.gif" align="center" height=25% width=25% ></a>
+<a href="url"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/Auto_Layout_Remake_Animation.gif" align="center" height=25% width=25% ></a>
 ```swift
 private var squareOriginConstraints: [NSLayoutConstraint] = []
 
