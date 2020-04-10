@@ -1,4 +1,4 @@
-# Swift-Practice
+# Swift Practice
 This is a Git repository that I use to store some playgrounds where I practice Swift functionality.
 
 ## AutoLayout Practice
