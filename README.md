@@ -68,8 +68,7 @@ func addAllSquareConstraints() {
 }
     
 @objc func handlePan(_ gestureRecognizer: UIPanGestureRecognizer) {
-    if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
-            
+    if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {  
         let translation = gestureRecognizer.translation(in: self.view)
         gestureRecognizer.view!.center = CGPoint(x: gestureRecognizer.view!.center.x + translation.x, y: gestureRecognizer.view!.center.y + translation.y)
         gestureRecognizer.setTranslation(CGPoint.zero, in: self.view)
