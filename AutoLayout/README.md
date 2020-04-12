@@ -24,9 +24,9 @@ NSLayoutConstraint.activate([
 ])
 ```
 
-### [Basic Auto Layout with Animation Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/Auto_Layout/BasicAnimationAutoLayout.playground)
+### [Basic Auto Layout with Animation Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/BasicAnimationAutoLayout.playground)
 
-<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/Auto_Layout/BasicAnimationAutoLayout.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicAnimationAutoLayout.gif" align="center" height=25% width=25% ></a>
+<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/BasicAnimationAutoLayout.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicAnimationAutoLayout.gif" align="center" height=25% width=25% ></a>
 ```swift
 self.topLeftButton.addTarget(self, action: #selector(squarePressed), for: UIControl.Event.touchUpInside)
 
