@@ -33,15 +33,12 @@ func fetchItunesData(completion: @escaping (FeedResponse?, Error?) -> ()) {
 #### [Networking with Results](https://github.com/StevenWorrall/Swift_Practice/tree/master/Networking/ResultsTypeNetworking.playground)
 ```swift
 func fetchItunesDataWithResults(completion: @escaping (Result<FeedResponse, Error>) -> ()) {
-	...
 	URLSession.shared.dataTask(with: url) { (data, resp, err) in
         if let err = err {
             completion(.failure(err))
             return
         }
-        
     ...
-
 
 fetchItunesDataWithResults { (result) in
     switch result {
@@ -53,9 +50,6 @@ fetchItunesDataWithResults { (result) in
                 print(name)
             }
         })
-    case .failure(let err):
-        print(err)
-        return
-    }
+    ...
 }
 ```
