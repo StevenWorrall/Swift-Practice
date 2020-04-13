@@ -8,6 +8,10 @@ This is a Git repository that I use to store some playgrounds where I practice S
 <a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/RemakeAnimationAutoLayout.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/RemakeAnimationAutoLayout.gif" height=400px width=auto ></a>
 
 
+## [Table View Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/)
+
+<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/BasicTableView.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicTableView.png" height=400px width=auto ></a>
+
 ## [Networking Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/Networking/)
 
 #### [Basic Networking](https://github.com/StevenWorrall/Swift_Practice/tree/master/Networking/BasicNetworking.playground)
