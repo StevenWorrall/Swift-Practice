@@ -12,7 +12,7 @@ This is a Git repository that I use to store some playgrounds where I practice S
 ## [Table View Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/)
 <p align="center">
 	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/BasicTableView.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicTableView.png" height=400px width=auto ></a>
-	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/TextBasedWithNetwork.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/TextBasedWithNetwork.png" margin-left=20px margin-right=20px height=400px width=auto ></a>
+	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/TextBasedWithNetwork.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/TextBasedWithNetwork.png" margin-left=60px margin-right=60px height=400px width=auto ></a>
 </p>
 
 ## [Networking Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/Networking/)
