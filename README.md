@@ -2,6 +2,7 @@
 This is a Git repository that I use to store some playgrounds where I practice Swift functionality.
 
 ## [Auto Layout Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/)
+Some exmaples ranging from basic view placement all the way to remaking constraints and updating them based on user interaction within the view.
 <p align="center">
 	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/BasicAutoLayout.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicAutoLayout.png" height=400px width=auto ></a>
 	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/BasicAnimationAutoLayout.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicAnimationAutoLayout.gif" height=400px width=auto ></a>
@@ -16,7 +17,7 @@ This is a Git repository that I use to store some playgrounds where I practice S
 </p>
 
 ## [Networking Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/Networking/)
-
+Practicing networking by starting with basic networking calls and slowly introducing more complex additions such as Result types and Generics
 #### [Basic Networking](https://github.com/StevenWorrall/Swift_Practice/tree/master/Networking/BasicNetworking.playground)
 <details>
   <summary>Expand for code block:</summary>
@@ -90,9 +91,10 @@ fetchGenericData(urlString: urlString) { (result: Result<FeedResponse, Error>) i
 </details>
 
 
+
+
 ## [Utilities](https://github.com/StevenWorrall/Swift-Practice/tree/master/Networking/)
 Some extensions and helpers I've found to be extremely helpful while developing. All credit given, where necessary, in the playground file.
-
 #### [Adding Images with a Cache (Table Views)](https://github.com/StevenWorrall/Swift_Practice/tree/master/Utilities/AddingImagesWithCache.playground)
 <details>
   <summary>Expand for code block:</summary>
