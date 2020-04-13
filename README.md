@@ -24,6 +24,7 @@ Some examples ranging from a basic Table View all the way to a Table View implem
 Some examples ranging from a basic Collection View all the way to a Collection View implementing a custom cell with Auto Layout and Async image loading and pagination. Click on the pictures to see their source code or [here](https://github.com/StevenWorrall/Swift-Practice/tree/master/CollectionView/) to see a more detailed Readme.
 <p align="center">
 	<a href="https://github.com/StevenWorrall/Swift_Practice/tree/master/CollectionView/BasicCollectonView.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicCollectionView.png" height=400px width=auto ></a>
+	<a href="https://github.com/StevenWorrall/Swift_Practice/tree/master/CollectionView/ImageBasedWithNetwork.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/ImageBasedWithNetwork.png" height=400px width=auto ></a>
 </p>
 
 ## [Networking Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/Networking/)
