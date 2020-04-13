@@ -11,6 +11,9 @@ This is a Git repository that I use to store some playgrounds where I practice S
 ## [Networking Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/Networking/)
 
 #### [Basic Networking](https://github.com/StevenWorrall/Swift_Practice/tree/master/Networking/BasicNetworking.playground)
+<details>
+  <summary>Expand for code block:</summary>
+  
 ```swift
 func fetchItunesData(completion: @escaping (FeedResponse?, Error?) -> ()) {
     guard let url = URL(string: urlString) else { return }
@@ -29,8 +32,12 @@ func fetchItunesData(completion: @escaping (FeedResponse?, Error?) -> ()) {
     }.resume()
 }
 ```
+</details>
 
 #### [Networking with Results](https://github.com/StevenWorrall/Swift_Practice/tree/master/Networking/ResultsTypeNetworking.playground)
+<details>
+  <summary>Expand for code block:</summary>
+  
 ```swift
 func fetchItunesDataWithResults(completion: @escaping (Result<FeedResponse, Error>) -> ()) {
 	URLSession.shared.dataTask(with: url) { (data, resp, err) in
@@ -53,14 +60,14 @@ fetchItunesDataWithResults { (result) in
     ...
 }
 ```
+</details>
 
 #### [Networking with Generics and Results](https://github.com/StevenWorrall/Swift_Practice/tree/master/Networking/GenericsNetworking.playground)
-
 <details>
-  <summary>Click to see code:</summary>
-  
-  ```swift
-	public func fetchGenericData<T: Decodable>(urlString: String, completion: @escaping ((Result<T, Error>) -> () )) {
+  <summary>Expand for code block:</summary>
+
+```swift
+public func fetchGenericData<T: Decodable>(urlString: String, completion: @escaping ((Result<T, Error>) -> () )) {
 	...
     do {
        	let dataResponse = try JSONDecoder().decode(T.self, from: data)
