@@ -39,6 +39,8 @@ func fetchItunesData(completion: @escaping (FeedResponse?, Error?) -> ()) {
     }.resume()
 }
 
+// if in class: fetchItunesDataWithResults { [weak self] (data, err) in
+
 fetchItunesData { (albumData, err) in
     if let err = err {
         // TODO add handler here to respond to bad data call

@@ -29,3 +29,33 @@ func fetchItunesData(completion: @escaping (FeedResponse?, Error?) -> ()) {
     }.resume()
 }
 ```
+
+#### [Networking with Results](https://github.com/StevenWorrall/Swift_Practice/tree/master/Networking/ResultsTypeNetworking.playground)
+```swift
+func fetchItunesDataWithResults(completion: @escaping (Result<FeedResponse, Error>) -> ()) {
+	...
+	URLSession.shared.dataTask(with: url) { (data, resp, err) in
+        if let err = err {
+            completion(.failure(err))
+            return
+        }
+        
+    ...
+
+
+fetchItunesDataWithResults { (result) in
+    switch result {
+    case .success(let data):
+        guard let resultData = data.feed.results else { return }
+        
+        resultData.forEach({ (album) in
+            if let name = album.name {
+                print(name)
+            }
+        })
+    case .failure(let err):
+        print(err)
+        return
+    }
+}
+```
