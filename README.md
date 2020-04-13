@@ -12,6 +12,8 @@ This is a Git repository that I use to store some playgrounds where I practice S
 
 <a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/BasicTableView.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicTableView.png" height=400px width=auto ></a>
 
+<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/TextBasedWithNetwork.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/TextBasedWithNetwork.png" height=400px width=auto ></a>
+
 ## [Networking Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/Networking/)
 
 #### [Basic Networking](https://github.com/StevenWorrall/Swift_Practice/tree/master/Networking/BasicNetworking.playground)
