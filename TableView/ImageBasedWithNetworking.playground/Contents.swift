@@ -3,6 +3,35 @@
 import UIKit
 import PlaygroundSupport
 
+let imageCache = NSCache<AnyObject, AnyObject>()
+
+class CustomImageView: UIImageView {
+    var imageUrlString: String?
+    func loadImageUsingUrlString(_ urlString: String) {
+        let url = URL(string: urlString)
+        imageUrlString = urlString
+        image = nil
+
+        if let imageFromCache = imageCache.object(forKey: urlString as AnyObject) as? UIImage {
+            self.image = imageFromCache
+            return
+        }
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if error != nil {
+                print(error!)
+                return
+            }
+            DispatchQueue.main.async {
+                let imageToCache = UIImage(data: data!)
+                if self.imageUrlString == urlString {
+                    self.image = imageToCache
+                }
+                imageCache.setObject(imageToCache!, forKey: urlString as AnyObject)
+            }
+        }.resume()
+    }
+}
+
 struct Album: Decodable {
     let id: String
     let artistName: String?
@@ -75,7 +104,7 @@ class MyViewController : UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: self.cellID)
+        tableView.register(MyTableViewCell.self, forCellReuseIdentifier: self.cellID)
 
         view.addSubview(tableView)
         
@@ -116,12 +145,12 @@ extension MyViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "cellId")
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.cellID) as! MyTableViewCell
         let dataForCell = data[indexPath.row]
         
-        cell.textLabel?.text = dataForCell.name
-        cell.detailTextLabel?.text = dataForCell.artistName
-        cell.accessoryType = UITableViewCell.AccessoryType.detailButton
+        cell.url = dataForCell.artworkUrl100
+        cell.topLabel.text = dataForCell.name ?? "Unknonwn"
+        cell.bottomLabel.text = dataForCell.artistName ?? "Unknonwn"
         cell.selectionStyle = .none
         
         return cell
@@ -129,14 +158,69 @@ extension MyViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 class MyTableViewCell: UITableViewCell {
+    private let spacingConstant:CGFloat = 10
+    
+    public var url: String? {
+        didSet {
+            if let unwrappedURL = self.url {
+                self.customImageView.loadImageUsingUrlString(unwrappedURL)
+            }
+        }
+    }
+    public let topLabel: UILabel = {
+        let temp = UILabel()
+        temp.textColor = .black
+        temp.font = UIFont.systemFont(ofSize: 20, weight: .regular)
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        return temp
+    }()
+    public let bottomLabel: UILabel = {
+        let temp = UILabel()
+        temp.textColor = .darkGray
+        temp.font = UIFont.systemFont(ofSize: 16, weight: .light)
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        return temp
+    }()
+    private let customImageView: CustomImageView = {
+        let temp = CustomImageView()
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.contentMode = .scaleAspectFit
+        return temp
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        self.backgroundColor = .red
+        setupViews()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupViews() {
+        self.addSubview(customImageView)
+        NSLayoutConstraint.activate([
+            customImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: self.spacingConstant),
+            customImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            customImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            customImageView.heightAnchor.constraint(equalToConstant: self.bounds.width),
+        ])
+        
+        self.addSubview(topLabel)
+        NSLayoutConstraint.activate([
+            topLabel.topAnchor.constraint(equalTo: customImageView.bottomAnchor, constant: self.spacingConstant),
+            topLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: self.spacingConstant),
+            topLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+        ])
+        
+        self.addSubview(bottomLabel)
+        NSLayoutConstraint.activate([
+            bottomLabel.topAnchor.constraint(equalTo: topLabel.bottomAnchor),
+            bottomLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -self.spacingConstant),
+            bottomLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: self.spacingConstant),
+            bottomLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+        ])
     }
 }
     
