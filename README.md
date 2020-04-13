@@ -4,7 +4,7 @@ This is a Git repository that I use to store some playgrounds where I practice S
 ## [Auto Layout Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/)
 <p align="center">
 	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/BasicAutoLayout.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicAutoLayout.png" height=400px width=auto ></a>
-	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/BasicAnimationAutoLayout.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicAnimationAutoLayout.gif" margin-left=20px margin-right=20px height=400px width=auto ></a>
+	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/BasicAnimationAutoLayout.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicAnimationAutoLayout.gif" height=400px width=auto ></a>
 	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/RemakeAnimationAutoLayout.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/RemakeAnimationAutoLayout.gif" height=400px width=auto ></a>
 </p>
 
@@ -12,7 +12,7 @@ This is a Git repository that I use to store some playgrounds where I practice S
 ## [Table View Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/)
 <p align="center">
 	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/BasicTableView.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicTableView.png" height=400px width=auto ></a>
-	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/TextBasedWithNetwork.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/TextBasedWithNetwork.png" margin-left=60px margin-right=60px height=400px width=auto ></a>
+	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/TextBasedWithNetwork.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/TextBasedWithNetwork.png" height=400px width=auto ></a>
 </p>
 
 ## [Networking Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/Networking/)
@@ -88,4 +88,47 @@ fetchGenericData(urlString: urlString) { (result: Result<FeedResponse, Error>) i
     ...
 ```
 </details>
+
+
+## [Utilities](https://github.com/StevenWorrall/Swift-Practice/tree/master/Networking/)
+Some extensions and helpers I've found to be extremely helpful while developing. All credit given, where necessary, in the playground file.
+
+#### [Adding Images with a Cache (Table Views)](https://github.com/StevenWorrall/Swift_Practice/tree/master/Utilities/AddingImagesWithCache.playground)
+<details>
+  <summary>Expand for code block:</summary>
+  
+```swift
+let imageCache = NSCache<AnyObject, AnyObject>()
+
+class CustomImageView: UIImageView {
+    var imageUrlString: String?
+    func loadImageUsingUrlString(_ urlString: String) {
+        let url = URL(string: urlString)
+        imageUrlString = urlString
+        image = nil
+
+        if let imageFromCache = imageCache.object(forKey: urlString as AnyObject) as? UIImage {
+            self.image = imageFromCache
+            return
+        }
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if error != nil {
+                print(error!)
+                return
+            }
+            DispatchQueue.main.async {
+                let imageToCache = UIImage(data: data!)
+                if self.imageUrlString == urlString {
+                    self.image = imageToCache
+                }
+                imageCache.setObject(imageToCache!, forKey: urlString as AnyObject)
+            }
+        }.resume()
+    }
+}
+```
+</details>
+
+
+
 
