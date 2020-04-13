@@ -55,8 +55,12 @@ fetchItunesDataWithResults { (result) in
 ```
 
 #### [Networking with Generics and Results](https://github.com/StevenWorrall/Swift_Practice/tree/master/Networking/GenericsNetworking.playground)
-```swift
-public func fetchGenericData<T: Decodable>(urlString: String, completion: @escaping ((Result<T, Error>) -> () )) {
+
+<details>
+  <summary>Click to see code:</summary>
+  
+  ```swift
+	public func fetchGenericData<T: Decodable>(urlString: String, completion: @escaping ((Result<T, Error>) -> () )) {
 	...
     do {
        	let dataResponse = try JSONDecoder().decode(T.self, from: data)
@@ -69,3 +73,5 @@ public func fetchGenericData<T: Decodable>(urlString: String, completion: @escap
 fetchGenericData(urlString: urlString) { (result: Result<FeedResponse, Error>) in
     ...
 ```
+</details>
+
