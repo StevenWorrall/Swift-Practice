@@ -11,10 +11,11 @@ Some exmaples ranging from basic view placement all the way to remaking constrai
 
 
 ## [Table View Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/)
-Some examples ranging from a basic Table View all the way to a Table View implementing a custom cell with Auto Layout and Async image loading. Click on the pictures to see their source code or [here](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/) to see a more detailed Readme.
+Some examples ranging from a basic Table View all the way to a Table View implementing a custom cell with Auto Layout and Async image loading. Click on the pictures to see their source code or [here](https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/) to see a more detailed Readme.
 <p align="center">
 	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/BasicTableView.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicTableView.png" height=400px width=auto ></a>
 	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/TextBasedWithNetwork.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/TextBasedWithNetwork.png" height=400px width=auto ></a>
+	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/TextBasedWithImagePopover.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/TextBasedWithImagePopover.png" height=400px width=auto ></a>
 </p>
 
 ## [Networking Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/Networking/)

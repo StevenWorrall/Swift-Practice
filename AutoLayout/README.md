@@ -41,7 +41,7 @@ UIView.animate(withDuration: self.animationDuration, animations: {
 
 ### [Auto Layout Remake with Animation Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/RemakeAnimationAutoLayout.playground)
 
-<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/RemakeAnimationAutoLayout.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/Auto_Layout_Remake_Animation.gif" align="center" height=25% width=25% ></a>
+<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/RemakeAnimationAutoLayout.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/RemakeAnimationAutoLayout.gif" align="center" height=25% width=25% ></a>
 ```swift
 private var squareOriginConstraints: [NSLayoutConstraint] = []
 
