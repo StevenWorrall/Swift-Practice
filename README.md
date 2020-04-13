@@ -19,6 +19,13 @@ Some examples ranging from a basic Table View all the way to a Table View implem
 	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/ImageBasedWithNetworking.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/ImageBasedWithNetworking.gif" height=400px width=auto ></a>
 </p>
 
+
+## [Collection View Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/CollectionView/)
+Some examples ranging from a basic Collection View all the way to a Collection View implementing a custom cell with Auto Layout and Async image loading and pagination. Click on the pictures to see their source code or [here](https://github.com/StevenWorrall/Swift-Practice/tree/master/CollectionView/) to see a more detailed Readme.
+<p align="center">
+	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/CollectionView/BasicCollectionView.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicCollectionView.png" height=400px width=auto ></a>
+</p>
+
 ## [Networking Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/Networking/)
 Practicing networking by starting with basic networking calls and slowly introducing more complex additions such as Result types and Generics
 #### [Basic Networking](https://github.com/StevenWorrall/Swift_Practice/tree/master/Networking/BasicNetworking.playground)
