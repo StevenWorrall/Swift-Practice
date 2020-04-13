@@ -2,7 +2,7 @@
 This is a Git repository that I use to store some playgrounds where I practice Swift functionality.
 
 ## [Auto Layout Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/)
-Some exmaples ranging from basic view placement all the way to remaking constraints and updating them based on user interaction within the view.
+Some exmaples ranging from basic view placement all the way to remaking constraints and updating them based on user interaction within the view. Click on the pictures to see their source code or [here](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/) to see a more detailed Readme.
 <p align="center">
 	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/BasicAutoLayout.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicAutoLayout.png" height=400px width=auto ></a>
 	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/BasicAnimationAutoLayout.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicAnimationAutoLayout.gif" height=400px width=auto ></a>
@@ -11,6 +11,7 @@ Some exmaples ranging from basic view placement all the way to remaking constrai
 
 
 ## [Table View Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/)
+Some examples ranging from a basic Table View all the way to a Table View implementing a custom cell with Auto Layout and Async image loading. Click on the pictures to see their source code or [here](https://github.com/StevenWorrall/Swift-Practice/tree/master/AutoLayout/) to see a more detailed Readme.
 <p align="center">
 	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/BasicTableView.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicTableView.png" height=400px width=auto ></a>
 	<a href="https://github.com/StevenWorrall/Swift-Practice/tree/master/TableView/TextBasedWithNetwork.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/TextBasedWithNetwork.png" height=400px width=auto ></a>
