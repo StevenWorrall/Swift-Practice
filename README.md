@@ -25,7 +25,7 @@ Some examples ranging from a basic Collection View all the way to a Collection V
 <p align="center">
 	<a href="https://github.com/StevenWorrall/Swift_Practice/tree/master/CollectionView/BasicCollectonView.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/BasicCollectionView.png" height=400px width=auto ></a>
 	<a href="https://github.com/StevenWorrall/Swift_Practice/tree/master/CollectionView/ImageBasedWithNetwork.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/ImageBasedWithNetwork.png" height=400px width=auto ></a>
-	<a href="https://github.com/StevenWorrall/Swift_Practice/tree/master/CollectionView/FullSizeWithNetworking.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/FullSizeWithNetworking.png" height=400px width=auto ></a>
+	<a href="https://github.com/StevenWorrall/Swift_Practice/tree/master/CollectionView/FullSizeWithNetworking.playground"><img src="https://github.com/StevenWorrall/Swift-Practice/blob/master/Pictures/FullSizeWithNetworking.gif" height=400px width=auto ></a>
 </p>
 
 ## [Networking Practice](https://github.com/StevenWorrall/Swift-Practice/tree/master/Networking/)
